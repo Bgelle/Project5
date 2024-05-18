@@ -31,7 +31,7 @@ def gettemperature():
    return temp
 
 @app.route("/getbyday/<string:day>", methods=['GET'])
-def get_employee(day):
+def get_byday(day):
         cursor.execute(f"SELECT * FROM temperature WHERE day={day}")
         result = cursor.fetchall()
         print(result)
